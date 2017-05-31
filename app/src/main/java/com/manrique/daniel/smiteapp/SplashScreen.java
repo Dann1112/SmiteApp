@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.app.AppCompatDelegate;
 
 import java.util.Timer;
 import java.util.TimerTask;
@@ -16,6 +17,7 @@ public class SplashScreen extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         setContentView(R.layout.splash_screen);
 
         TimerTask task = new TimerTask() {
@@ -23,9 +25,9 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
 
                 // Start the next activity
-                Intent mainIntent = new Intent().setClass(
+                Intent loginIntent = new Intent().setClass(
                         SplashScreen.this, Login.class);
-                startActivity(mainIntent);
+                startActivity(loginIntent);
 
                 // Close the activity so the user won't able to go back this
                 // activity pressing Back button
