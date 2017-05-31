@@ -10,25 +10,32 @@ import java.util.TimerTask;
 
 public class SplashScreen extends AppCompatActivity {
 
+    private static final long SPLASH_SCREEN_DELAY = 2000;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
-        getActionBar().hide();
         setContentView(R.layout.splash_screen);
-
-        Intent goToMenu = new Intent(this, MainMenu.class);
-
-        Timer t = new Timer();
 
         TimerTask task = new TimerTask() {
             @Override
             public void run() {
+
+                // Start the next activity
+                Intent mainIntent = new Intent().setClass(
+                        SplashScreen.this, Login.class);
+                startActivity(mainIntent);
+
+                // Close the activity so the user won't able to go back this
+                // activity pressing Back button
+                finish();
             }
         };
 
-        t.schedule(task, 20000);
-        startActivity(goToMenu);
+        // Simulate a long loading process on application startup.
+        Timer timer = new Timer();
+        timer.schedule(task, SPLASH_SCREEN_DELAY);
 
     }
 }
