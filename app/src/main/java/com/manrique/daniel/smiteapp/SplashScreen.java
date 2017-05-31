@@ -17,7 +17,7 @@ public class SplashScreen extends AppCompatActivity {
         getActionBar().hide();
         setContentView(R.layout.splash_screen);
 
-        Intent goToMenu = new Intent(this, Menu.class);
+        Intent goToMenu = new Intent(this, MainMenu.class);
 
         Timer t = new Timer();
 
