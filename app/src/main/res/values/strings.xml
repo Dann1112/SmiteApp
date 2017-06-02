@@ -16,4 +16,7 @@
     <string name="create_new_build">Create new build</string>
     <string name="gods_name">Type your God\'s name</string>
     <string name="forgot_password">Forgot your password?</string>
+    <string name="build">Build</string>
+    <string name="counter">Counter</string>
+    <string name="search">Search</string>
 </resources>
