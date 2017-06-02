@@ -10,4 +10,10 @@
     <string name="username">Username</string>
     <string name="password">Password</string>
     <string name="sign_in">Sign In</string>
+    <string name="favorites">Favorites</string>
+    <string name="downloads">Downloads</string>
+    <string name="my_profile">My Profile</string>
+    <string name="create_new_build">Create new build</string>
+    <string name="gods_name">Type your God\'s name</string>
+    <string name="forgot_password">Forgot your password?</string>
 </resources>
