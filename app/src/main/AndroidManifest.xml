@@ -43,6 +43,14 @@
             android:name=".CreateNewBuild1"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <activity
+            android:name=".CreateNewBuild2"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <activity
+            android:name=".CreateNewBuild3"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
 
     </application>
 

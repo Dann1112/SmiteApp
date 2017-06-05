@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="24dp">
+
+    <RelativeLayout
+        android:id="@+id/new_build_form"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/create_build"
+            android:textSize="@dimen/main_title" />
+
+        <ImageView
+            android:id="@+id/god_avatar"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_below="@id/title"
+            android:layout_marginTop="24dp"
+            android:contentDescription="@string/gods_name"
+            android:src="@mipmap/ic_launcher" />
+
+        <EditText
+            android:id="@+id/build_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/title"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@id/god_avatar"
+            android:gravity="center_horizontal"
+            android:hint="@string/build_title"
+            android:textSize="@dimen/main_title" />
+
+        <TextView
+            android:id="@+id/selected_mode"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/build_title"
+            android:layout_marginStart="24dp"
+            android:layout_toEndOf="@id/god_avatar"
+            android:gravity="center_horizontal"
+            android:text="@string/selected_mode"
+            android:textSize="@dimen/subtitle" />
+
+        <RelativeLayout
+            android:id="@+id/user_info"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/god_avatar"
+            android:layout_marginTop="12dp">
+
+            <ImageView
+                android:id="@+id/user_avatar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerHorizontal="true"
+                android:contentDescription="@string/username" />
+
+            <TextView
+                android:id="@+id/username"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/user_avatar"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:text="@string/username" />
+
+            <TextView
+                android:id="@+id/points"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/username"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="6dp"
+                android:text="@string/points" />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/god_skills_order"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/god_avatar"
+            android:layout_toEndOf="@id/user_info">
+
+            <include
+                layout="@layout/app_bar_main_menu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"></include>
+        </LinearLayout>
+
+        <GridView
+            android:id="@+id/builds_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/god_skills_order"
+            android:layout_marginTop="24dp"
+            android:layout_toEndOf="@id/user_info">
+
+
+        </GridView>
+
+
+        <Button
+            android:id="@+id/finish_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/builds_view"
+            android:layout_marginTop="24dp"
+            android:background="@color/colorPrimary"
+            android:paddingLeft="36dp"
+            android:paddingRight="36dp"
+            android:text="@string/finish" />
+
+
+    </RelativeLayout>
+
+
+</ScrollView>

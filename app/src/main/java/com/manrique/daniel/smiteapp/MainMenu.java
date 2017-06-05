@@ -73,16 +73,16 @@ public class MainMenu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_slideshow) {
+        if (id == R.id.nav_my_profile) {
             Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
 
             startActivity(goToProfile);
 
             // Handle the camera action
-        } else if (id == R.id.nav_gallery) {
-            Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
+        } else if (id == R.id.nav_create) {
+            Intent goToCreation = new Intent().setClass(MainMenu.this, CreateNewBuild1.class);
 
-            startActivity(goToProfile);
+            startActivity(goToCreation);
 
         } else if (id == R.id.nav_view) {
             Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);

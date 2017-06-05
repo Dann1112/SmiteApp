@@ -49,4 +49,8 @@
     <string name="next">Next</string>
     <string name="select_the_god">2. Select the God</string>
     <string name="filter_by">Filter By:</string>
+    <string name="create_build">3. Create Build</string>
+    <string name="finish">Finish</string>
+    <string name="build_title">Build Title</string>
+    <string name="selected_mode">Selected Mode</string>
 </resources>

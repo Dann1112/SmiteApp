@@ -9,12 +9,16 @@ import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.Button;
 
-public class CreateNewBuild1 extends AppCompatActivity {
+/**
+ * Created by Dann on 05/06/2017.
+ */
+
+public class CreateNewBuild2 extends AppCompatActivity {
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.new_build_1);
+        setContentView(R.layout.new_build_2);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
 
@@ -24,8 +28,8 @@ public class CreateNewBuild1 extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                Intent nextCreationStep = new Intent().setClass(CreateNewBuild1.this,
-                        CreateNewBuild2.class);
+                Intent nextCreationStep = new Intent().setClass(CreateNewBuild2.this,
+                        CreateNewBuild3.class);
 
                 startActivity(nextCreationStep);
 
