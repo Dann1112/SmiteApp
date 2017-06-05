@@ -39,6 +39,10 @@
             android:name=".CreateAccount"
             android:theme="@style/AppTheme.NoActionBar"></activity>
 
+        <activity
+            android:name=".CreateNewBuild1"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
 
     </application>
 

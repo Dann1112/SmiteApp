@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="@dimen/outter_margin"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/select_game_mode_new_build"
+        android:textSize="@dimen/main_title" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <RadioButton
+            android:id="@+id/conquest_rdbtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="12dp"
+            android:layout_marginTop="36dp"
+            android:text="@string/conquest_mode"
+            android:textSize="@dimen/subtitle" />
+
+        <RadioGroup
+            android:id="@+id/conquest_lanes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conquest_rdbtn"
+            android:orientation="horizontal">
+
+            <CheckBox
+                android:id="@+id/mid"
+
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/mid"
+                android:textSize="@dimen/subtitle" />
+
+            <CheckBox
+                android:id="@+id/carry"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/carry"
+                android:textSize="@dimen/subtitle" />
+
+            <CheckBox
+                android:id="@+id/guard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/guard"
+                android:textSize="@dimen/subtitle" />
+
+            <CheckBox
+                android:id="@+id/jungle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/jungle"
+                android:textSize="@dimen/subtitle" />
+
+            <CheckBox
+                android:id="@+id/solo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:text="@string/solo"
+                android:textSize="@dimen/subtitle" />
+
+        </RadioGroup>
+
+        <RadioGroup
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/conquest_lanes"
+            android:orientation="horizontal">
+
+
+            <RadioButton
+                android:id="@+id/arena_rdbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/arena_mode"
+                android:textSize="@dimen/subtitle" />
+
+            <RadioButton
+                android:id="@+id/joust_rdbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/joust_mode"
+                android:textSize="@dimen/subtitle" />
+
+            <RadioButton
+                android:id="@+id/assault_rdbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/assault_mode"
+                android:textSize="@dimen/subtitle" />
+
+            <RadioButton
+                android:id="@+id/siege_rdbtn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="36dp"
+                android:text="@string/siege_mode"
+                android:textSize="@dimen/subtitle" />
+
+        </RadioGroup>
+
+
+    </RelativeLayout>
+
+
+</LinearLayout>

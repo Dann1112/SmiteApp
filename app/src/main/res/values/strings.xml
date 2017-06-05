@@ -33,4 +33,17 @@
     <string name="find_me">Find Me @</string>
     <string name="in_game_name">In-Game Name</string>
     <string name="device">Device</string>
+    <string name="select_game_mode_new_build">1. What game mode is best for your new build?</string>
+    <string name="conquest_mode">Conquest</string>
+    <string name="mid_lane">Mid</string>
+    <string name="carry">Carry</string>
+    <string name="mid">Mid</string>
+    <string name="guard">Guard</string>
+    <string name="jungle">Jungle</string>
+    <string name="solo">Solo</string>
+    <string name="arena">Arena</string>
+    <string name="arena_mode">Arena</string>
+    <string name="joust_mode">Joust</string>
+    <string name="assault_mode">Assault</string>
+    <string name="siege_mode">Siege</string>
 </resources>
