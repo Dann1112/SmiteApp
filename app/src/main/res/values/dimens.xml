@@ -9,4 +9,5 @@
     <dimen name="main_title">30sp</dimen>
     <dimen name="subtitle">24sp</dimen>
     <dimen name="outter_margin">24dp</dimen>
+    <dimen name="social_network_icon">40dp</dimen>
 </resources>

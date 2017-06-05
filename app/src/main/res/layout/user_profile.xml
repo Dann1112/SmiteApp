@@ -2,32 +2,34 @@
 
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="wrap_content">
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/outter_margin">
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
 
-        android:orientation="vertical"
-        android:padding="24dp">
+        android:orientation="vertical">
 
-        <!-- FOTO E INFORMACION PRINCIPAL-->
+        <!-- FOTO, INFORMACION PRINCIPAL-->
         <LinearLayout
             android:id="@+id/user_main_info"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:gravity="center"
             android:orientation="horizontal">
 
             <ImageView
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:contentDescription="@string/username" />
+                android:layout_width="100dp"
+                android:layout_height="100dp"
+                android:contentDescription="@string/username"
+                android:src="@mipmap/ic_launcher" />
 
             <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="150dp"
-                android:layout_weight="3">
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="24dp"
+                android:gravity="center">
 
                 <TextView
                     android:id="@+id/username"
@@ -37,262 +39,111 @@
                     android:text="@string/username"
                     android:textSize="@dimen/subtitle" />
 
-                <TextView
-                    android:id="@+id/crew"
+                <LinearLayout
+                    android:id="@+id/in_game"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_below="@id/username"
                     android:layout_centerHorizontal="true"
-                    android:text="@string/crew" />
+                    android:gravity="center">
+
+                    <TextView
+                        android:id="@+id/crew"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/in_game_name" />
+
+                    <ImageView
+                        android:id="@+id/device"
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:layout_marginStart="12dp"
+                        android:contentDescription="@string/device"
+                        android:src="@mipmap/ic_launcher" />
+
+
+                </LinearLayout>
+
+
 
                 <TextView
                     android:id="@+id/points"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_below="@id/crew"
+                    android:layout_below="@id/in_game"
                     android:layout_centerHorizontal="true"
                     android:text="@string/points" />
 
 
             </RelativeLayout>
 
+
+
         </LinearLayout>
 
-        <!-- REDES SOCIALES Y BEST GODS-->
-        <LinearLayout
-            android:id="@+id/social_and_gods"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
+        <!-- REDES SOCIALES-->
+        <RelativeLayout
+            android:id="@+id/social_networks"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@id/user_main_info"
-            android:baselineAligned="false"
-            android:orientation="horizontal"
-            android:weightSum="4">
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp">
 
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
+            <ImageView
+                android:id="@+id/facebook"
+                android:layout_width="@dimen/social_network_icon"
+                android:layout_height="@dimen/social_network_icon"
+                android:layout_marginEnd="25dp"
+                android:contentDescription="@string/facebook"
+                android:src="@drawable/ic_menu_gallery" />
 
-                <ImageView
-                    android:id="@+id/facebook"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:contentDescription="@string/facebook"
-                    android:src="@drawable/ic_menu_gallery" />
+            <ImageView
+                android:id="@+id/twitter"
+                android:layout_width="@dimen/social_network_icon"
+                android:layout_height="@dimen/social_network_icon"
+                android:layout_marginEnd="25dp"
+                android:layout_toEndOf="@id/facebook"
+                android:contentDescription="@string/facebook"
+                android:src="@drawable/ic_menu_gallery" />
 
-                <ImageView
-                    android:id="@+id/twitter"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:layout_toEndOf="@id/facebook"
-                    android:contentDescription="@string/facebook"
-                    android:src="@drawable/ic_menu_gallery" />
+            <ImageView
+                android:id="@+id/instagram"
+                android:layout_width="@dimen/social_network_icon"
+                android:layout_height="@dimen/social_network_icon"
+                android:layout_marginEnd="25dp"
+                android:layout_toEndOf="@id/twitter"
+                android:contentDescription="@string/facebook"
+                android:src="@drawable/ic_menu_gallery" />
 
-                <ImageView
-                    android:id="@+id/instagram"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_toEndOf="@id/twitter"
-                    android:contentDescription="@string/facebook"
-                    android:src="@drawable/ic_menu_gallery" />
+            <ImageView
+                android:id="@+id/youtube"
+                android:layout_width="@dimen/social_network_icon"
+                android:layout_height="@dimen/social_network_icon"
+                android:layout_marginEnd="25dp"
+                android:layout_toEndOf="@id/instagram"
+                android:contentDescription="@string/facebook"
+                android:src="@drawable/ic_menu_gallery" />
 
-                <ImageView
-                    android:id="@+id/youtube"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/facebook"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:layout_marginStart="25dp"
-                    android:contentDescription="@string/facebook"
-                    android:src="@drawable/ic_menu_gallery" />
-
-                <ImageView
-                    android:id="@+id/twitch"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/facebook"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:layout_toEndOf="@id/youtube"
-                    android:contentDescription="@string/facebook"
-                    android:src="@drawable/ic_menu_gallery" />
+            <ImageView
+                android:id="@+id/twitch"
+                android:layout_width="@dimen/social_network_icon"
+                android:layout_height="@dimen/social_network_icon"
+                android:layout_toEndOf="@id/youtube"
+                android:contentDescription="@string/facebook"
+                android:src="@drawable/ic_menu_gallery" />
 
 
-            </RelativeLayout>
+        </RelativeLayout>
 
-            <include
-                layout="@layout/build_layout"
-                android:layout_width="wrap_content"
-                android:layout_height="match_parent">
-
-            </include>
-
-
-        </LinearLayout>
-
-        <!-- CONSOLA PREFERIDA Y GAMERTAG -->
-        <LinearLayout
-            android:id="@+id/system_and_gamertag"
+        <ListView
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:layout_below="@id/social_and_gods"
-            android:baselineAligned="false"
-            android:orientation="horizontal">
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1"
-                android:gravity="center">
-
-                <TextView
-                    android:id="@+id/preferred_system_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:text="@string/preferred_system" />
-
-                <ImageView
-                    android:id="@+id/xbox"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/preferred_system_txt"
-                    android:layout_marginEnd="25dp"
-                    android:contentDescription="@string/xbox"
-                    android:src="@drawable/ic_menu_share" />
-
-                <ImageView
-                    android:id="@+id/pc"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/preferred_system_txt"
-                    android:layout_marginEnd="25dp"
-                    android:layout_toEndOf="@id/xbox"
-                    android:contentDescription="@string/computer"
-                    android:src="@drawable/ic_menu_share" />
-
-                <ImageView
-                    android:id="@+id/ps"
-                    android:layout_width="25dp"
-                    android:layout_height="25dp"
-                    android:layout_below="@id/preferred_system_txt"
-                    android:layout_marginEnd="25dp"
-                    android:layout_toEndOf="@id/pc"
-                    android:contentDescription="@string/playstation"
-                    android:src="@drawable/ic_menu_share" />
+            android:layout_height="100dp"
+            android:layout_below="@id/social_networks">
 
 
-            </RelativeLayout>
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <TextView
-                    android:id="@+id/ingame_username_txt"
-                    android:layout_width="wrap_content"
-                    android:layout_height="match_parent"
-                    android:layout_centerHorizontal="true"
-                    android:text="@string/ingame_name" />
-
-                <EditText
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_below="@id/ingame_username_txt"
-                    android:layout_centerHorizontal="true"
-                    android:hint="@string/username" />
-
-            </RelativeLayout>
-
-
-        </LinearLayout>
-
-        <!-- COLABORACIONES
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:orientation="horizontal"
-            android:layout_below="@id/user_main_info"
-            android:weightSum="4"
-            android:baselineAligned="false"
-            >
-
-            <RelativeLayout
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:layout_weight="1">
-
-                <ImageView
-                    android:id="@+id/facebook"
-                    android:layout_width="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:contentDescription="@string/facebook"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_menu_gallery"/>
-
-                <ImageView
-                    android:id="@+id/twitter"
-                    android:layout_toEndOf="@id/facebook"
-                    android:layout_width="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:contentDescription="@string/facebook"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_menu_gallery"/>
-
-                <ImageView
-                    android:id="@+id/instagram"
-                    android:layout_toEndOf="@id/twitter"
-                    android:layout_width="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:contentDescription="@string/facebook"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_menu_gallery"/>
-
-                <ImageView
-                    android:id="@+id/youtube"
-                    android:layout_marginStart="25dp"
-                    android:layout_below="@id/facebook"
-                    android:layout_width="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:contentDescription="@string/facebook"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_menu_gallery"/>
-
-                <ImageView
-                    android:id="@+id/twitch"
-                    android:layout_toEndOf="@id/youtube"
-                    android:layout_below="@id/facebook"
-                    android:layout_width="25dp"
-                    android:layout_marginBottom="25dp"
-                    android:layout_marginEnd="25dp"
-                    android:contentDescription="@string/facebook"
-                    android:layout_height="25dp"
-                    android:src="@drawable/ic_menu_gallery"/>
-
-
-
-
-            </RelativeLayout>
-
-            <include layout="@layout/build_layout"
-                android:layout_height="match_parent"
-                android:layout_width="wrap_content">
-
-            </include>
-
-
-
-        </LinearLayout>-->
-
+        </ListView>
 
     </RelativeLayout>
 </ScrollView>
