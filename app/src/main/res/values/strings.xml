@@ -19,4 +19,12 @@
     <string name="build">Build</string>
     <string name="counter">Counter</string>
     <string name="search">Search</string>
+    <string name="points">000 points</string>
+    <string name="crew">[ MyCrew ]</string>
+    <string name="facebook">Facebook</string>
+    <string name="preferred_system">Preferred System</string>
+    <string name="xbox">Xbox</string>
+    <string name="computer">Computer</string>
+    <string name="playstation">Playstation</string>
+    <string name="ingame_name">In-Game Username</string>
 </resources>

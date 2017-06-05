@@ -6,4 +6,7 @@
     <dimen name="nav_header_height">160dp</dimen>
     <dimen name="fab_margin">16dp</dimen>
     <dimen name="button_left">24dp</dimen>
+    <dimen name="main_title">52sp</dimen>
+    <dimen name="subtitle">36sp</dimen>
+    <dimen name="third_title">24sp</dimen>
 </resources>

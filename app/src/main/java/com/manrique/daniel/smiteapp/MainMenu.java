@@ -1,5 +1,6 @@
 package com.manrique.daniel.smiteapp;
 
+import android.content.Intent;
 import android.content.pm.ActivityInfo;
 import android.os.Bundle;
 import android.support.design.widget.NavigationView;
@@ -18,7 +19,7 @@ public class MainMenu extends AppCompatActivity
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.main_menu);
+        setContentView(R.layout.nav_drawer);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
@@ -72,13 +73,26 @@ public class MainMenu extends AppCompatActivity
         // Handle navigation view item clicks here.
         int id = item.getItemId();
 
-        if (id == R.id.nav_favorites) {
+        if (id == R.id.nav_slideshow) {
+            Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
+
+            startActivity(goToProfile);
+
             // Handle the camera action
         } else if (id == R.id.nav_gallery) {
+            Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
 
-        } else if (id == R.id.nav_slideshow) {
+            startActivity(goToProfile);
+
+        } else if (id == R.id.nav_view) {
+            Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
+
+            startActivity(goToProfile);
 
         } else if (id == R.id.nav_favorites) {
+            Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
+
+            startActivity(goToProfile);
 
         }
 
