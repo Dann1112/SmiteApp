@@ -43,8 +43,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/username"
                     android:layout_centerHorizontal="true"
-                    android:text="@string/crew"
-                    android:textSize="@dimen/third_title" />
+                    android:text="@string/crew" />
 
                 <TextView
                     android:id="@+id/points"
@@ -52,8 +51,7 @@
                     android:layout_height="wrap_content"
                     android:layout_below="@id/crew"
                     android:layout_centerHorizontal="true"
-                    android:text="@string/points"
-                    android:textSize="@dimen/third_title" />
+                    android:text="@string/points" />
 
 
             </RelativeLayout>
@@ -157,8 +155,7 @@
                     android:id="@+id/preferred_system_txt"
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
-                    android:text="@string/preferred_system"
-                    android:textSize="@dimen/third_title" />
+                    android:text="@string/preferred_system" />
 
                 <ImageView
                     android:id="@+id/xbox"
@@ -202,8 +199,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="match_parent"
                     android:layout_centerHorizontal="true"
-                    android:text="@string/ingame_name"
-                    android:textSize="@dimen/third_title" />
+                    android:text="@string/ingame_name" />
 
                 <EditText
                     android:layout_width="match_parent"

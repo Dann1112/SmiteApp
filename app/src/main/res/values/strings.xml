@@ -27,4 +27,7 @@
     <string name="computer">Computer</string>
     <string name="playstation">Playstation</string>
     <string name="ingame_name">In-Game Username</string>
+    <string name="create_account">Create Account</string>
+    <string name="email">e-mail</string>
+    <string name="create">Create</string>
 </resources>

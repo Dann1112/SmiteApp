@@ -19,14 +19,22 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login);
 
         Button signInBtn = (Button) findViewById(R.id.btn_sign_in);
+        Button signUpBtn = (Button) findViewById(R.id.btn_sign_up);
 
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-
                 Intent toMainMenu = new Intent().setClass(Login.this, MainMenu.class);
-
                 startActivity(toMainMenu);
+            }
+        });
+
+
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent toCreateAccount = new Intent().setClass(Login.this, CreateAccount.class);
+                startActivity(toCreateAccount);
             }
         });
 
