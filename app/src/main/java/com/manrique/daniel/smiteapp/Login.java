@@ -14,7 +14,7 @@ import android.widget.Toast;
 public class Login extends AppCompatActivity {
 
     Button signInBtn;
-    TextView createAccountBtn;
+    Button signUpBtn;
     TextView usernameTxt;
     TextView passwordTxt;
     String username;
@@ -29,7 +29,7 @@ public class Login extends AppCompatActivity {
         setContentView(R.layout.login);
 
         signInBtn = (Button) findViewById(R.id.sign_in_btn);
-        createAccountBtn = (TextView) findViewById(R.id.create_account_lbl);
+        signUpBtn = (Button) findViewById(R.id.sign_up_btn);
         usernameTxt = (TextView) findViewById(R.id.username_txt);
         passwordTxt = (TextView) findViewById(R.id.password_txt);
 
@@ -42,7 +42,7 @@ public class Login extends AppCompatActivity {
             }
         });
 
-        createAccountBtn.setOnClickListener(new View.OnClickListener() {
+        signUpBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent().setClass(Login.this, CreateAccount.class));

@@ -2,8 +2,9 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:layout_margin="@dimen/outter_margin"
-    android:gravity="center">
+    android:background="@color/colorBackground"
+    android:gravity="center"
+    android:padding="@dimen/outter_margin">
 
 
     <ImageView
@@ -45,7 +46,7 @@
         android:layout_below="@id/password_txt"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="36dp"
-        android:background="@color/colorPrimary"
+        android:background="@color/colorAccent"
         android:paddingLeft="72dp"
         android:paddingRight="72dp"
         android:text="@string/sign_in" />
