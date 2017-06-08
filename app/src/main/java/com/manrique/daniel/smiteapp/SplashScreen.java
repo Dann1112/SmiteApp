@@ -16,7 +16,7 @@ public class SplashScreen extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_LANDSCAPE);
+        setRequestedOrientation(ActivityInfo.SCREEN_ORIENTATION_PORTRAIT);
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         setContentView(R.layout.splash_screen);
 
@@ -25,9 +25,9 @@ public class SplashScreen extends AppCompatActivity {
             public void run() {
 
                 // Start the next activity
-                Intent loginIntent = new Intent().setClass(
+                Intent toLogin = new Intent().setClass(
                         SplashScreen.this, Login.class);
-                startActivity(loginIntent);
+                startActivity(toLogin);
 
                 // Close the activity so the user won't able to go back this
                 // activity pressing Back button

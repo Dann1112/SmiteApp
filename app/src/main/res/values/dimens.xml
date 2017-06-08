@@ -10,4 +10,6 @@
     <dimen name="subtitle">24sp</dimen>
     <dimen name="outter_margin">24dp</dimen>
     <dimen name="social_network_icon">40dp</dimen>
+    <dimen name="small_logo">60dp</dimen>
+    <dimen name="medium_logo">120dp</dimen>
 </resources>

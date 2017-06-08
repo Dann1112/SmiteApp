@@ -53,4 +53,7 @@
     <string name="finish">Finish</string>
     <string name="build_title">Build Title</string>
     <string name="selected_mode">Selected Mode</string>
+    <string name="username_length">Username must be between 4 an 16 characters</string>
+    <string name="password_length">Password must be between 4 an 16 characters</string>
+    <string name="valid_characters">Only Alphanumeric, \"-\" or \"_\"</string>
 </resources>

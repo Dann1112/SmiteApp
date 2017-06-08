@@ -6,9 +6,10 @@
     tools:context="com.manrique.daniel.smiteapp.SplashScreen">
 
     <ImageView
-        android:layout_width="100dp"
-        android:layout_height="100dp"
+        android:layout_width="@dimen/medium_logo"
+        android:layout_height="@dimen/medium_logo"
         android:layout_centerInParent="true"
-        android:src="@mipmap/ic_launcher" />
+        android:contentDescription="@string/app_name"
+        android:src="@drawable/logo" />
 
 </RelativeLayout>

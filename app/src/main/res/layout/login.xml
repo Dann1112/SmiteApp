@@ -2,83 +2,73 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center_vertical"
-
-    android:padding="@dimen/activity_horizontal_margin">
+    android:layout_margin="@dimen/outter_margin"
+    android:gravity="center">
 
 
     <ImageView
-        android:id="@+id/logo"
-        android:layout_width="60dp"
-        android:layout_height="60dp"
+        android:id="@+id/logo_img"
+        android:layout_width="@dimen/medium_logo"
+        android:layout_height="@dimen/medium_logo"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/app_name"
-        android:src="@mipmap/ic_launcher" />
-
-    <LinearLayout
-        android:id="@+id/form_login"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/logo"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="12dp"
-        android:gravity="center"
-        android:orientation="vertical">
+        android:src="@drawable/logo" />
 
         <EditText
-            android:id="@+id/username"
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
+            android:id="@+id/username_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/logo_img"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="36dp"
+            android:gravity="center"
             android:hint="@string/username"
             android:inputType="text"
+            android:maxLength="16"
             android:maxLines="1" />
 
         <EditText
-            android:id="@+id/password"
-            android:layout_width="400dp"
-            android:layout_height="match_parent"
-            android:gravity="center_horizontal"
+            android:id="@+id/password_txt"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/username_txt"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="12dp"
+            android:gravity="center"
             android:hint="@string/password"
             android:inputType="textPassword" />
 
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/buttons_layout"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/form_login"
-        android:layout_marginTop="24dp"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal">
     <Button
-        android:id="@+id/btn_sign_in"
+        android:id="@+id/sign_in_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/password_txt"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
         android:background="@color/colorPrimary"
-
-        android:paddingLeft="36dp"
-        android:paddingRight="36dp"
+        android:paddingLeft="72dp"
+        android:paddingRight="72dp"
         android:text="@string/sign_in" />
 
     <Button
-        android:id="@+id/btn_sign_up"
+        android:id="@+id/sign_up_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginStart="24dp"
-        android:background="@color/colorPrimaryDark"
+        android:layout_below="@id/sign_in_btn"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="36dp"
+        android:background="@color/colorPrimary"
         android:paddingLeft="36dp"
         android:paddingRight="36dp"
-        android:text="@string/sign_up" />
-    </LinearLayout>
+        android:text="@string/create_account" />
 
     <TextView
+        android:id="@+id/forgot_password_lbl"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/buttons_layout"
+        android:layout_below="@id/sign_up_btn"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="24dp"
+        android:layout_marginTop="36dp"
         android:text="@string/forgot_password" />
 
 </RelativeLayout>
