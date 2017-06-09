@@ -33,12 +33,14 @@ public class Login extends AppCompatActivity {
         usernameTxt = (TextView) findViewById(R.id.username_txt);
         passwordTxt = (TextView) findViewById(R.id.password_txt);
 
+
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Toast.makeText(Login.this, "CLICK", Toast.LENGTH_SHORT).show();
+                username = String.valueOf(usernameTxt.getText());
+                pass = String.valueOf(passwordTxt.getText());
 
-                login();
+                login(username, pass);
             }
         });
 
@@ -52,7 +54,7 @@ public class Login extends AppCompatActivity {
     }
 
 
-    private void login() {
+    private void login(String username, String password) {
         if (validate()) {
 
             Toast.makeText(this, "Autenticado", Toast.LENGTH_SHORT).show();
@@ -64,15 +66,14 @@ public class Login extends AppCompatActivity {
 
     private boolean validate() {
 
-        username = String.valueOf(usernameTxt.getText());
-        pass = String.valueOf(passwordTxt.getText());
+
 
         if (username.isEmpty() || username.length() < 4 || username.length() > 16) {
             usernameTxt.setError(getString(R.string.username_length));
             usernameTxt.setText("");
             passwordTxt.setText("");
             return false;
-        } else if (username.matches("/W")) {
+        } else if (!username.matches("\\w")) {
             usernameTxt.setError(getString(R.string.valid_characters));
             usernameTxt.setText("");
             passwordTxt.setText("");
@@ -83,7 +84,7 @@ public class Login extends AppCompatActivity {
             passwordTxt.setText("");
             return false;
 
-        } else if (pass.matches("/W")) {
+        } else if (!pass.matches("\\w")) {
             passwordTxt.setError(getString(R.string.valid_characters));
             usernameTxt.setText("");
             passwordTxt.setText("");
