@@ -56,4 +56,6 @@
     <string name="username_length">Username must be between 4 an 16 characters</string>
     <string name="password_length">Password must be between 4 an 16 characters</string>
     <string name="valid_characters">Only Alphanumeric, \"-\" or \"_\"</string>
+    <string name="email_format">Email must be formatted: \'example@example.com\'</string>
+    <string name="email_length">Email is empty</string>
 </resources>
