@@ -58,4 +58,5 @@
     <string name="valid_characters">Only Alphanumeric, \"-\" or \"_\"</string>
     <string name="email_format">Email must be formatted: \'example@example.com\'</string>
     <string name="email_length">Email is empty</string>
+    <string name="go">Go</string>
 </resources>

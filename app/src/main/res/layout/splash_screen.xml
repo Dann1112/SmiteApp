@@ -6,6 +6,7 @@
     android:background="@drawable/background"
     tools:context="com.manrique.daniel.smiteapp.SplashScreen">
 
+
     <ImageView
         android:layout_width="@dimen/medium_logo"
         android:layout_height="@dimen/medium_logo"
