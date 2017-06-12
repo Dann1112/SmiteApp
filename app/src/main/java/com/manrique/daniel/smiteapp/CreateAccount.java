@@ -9,12 +9,11 @@ import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class CreateAccount extends AppCompatActivity {
 
     Button createBtn;
-    TextView usernameTxt, emailTxt, passwordTxt;
+    TextView usernameTxt, emailTxt, passwordTxt, titleTxt;
     String username, email, password;
 
     @Override
@@ -29,6 +28,9 @@ public class CreateAccount extends AppCompatActivity {
         emailTxt = (TextView) findViewById(R.id.new_email_txt);
         passwordTxt = (TextView) findViewById(R.id.new_password_txt);
 
+        createBtn.setFocusable(true);
+        createBtn.setFocusableInTouchMode(true);
+        createBtn.requestFocus();
 
         createBtn.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -44,12 +46,9 @@ public class CreateAccount extends AppCompatActivity {
 
     private void create(String username, String email, String password) {
         if (validate()) {
-
-            Toast.makeText(this, "Creado", Toast.LENGTH_SHORT).show();
             Intent toMainMenu = new Intent().setClass(CreateAccount.this, MainMenu.class);
             startActivity(toMainMenu);
-        } else
-            Toast.makeText(this, "FAIL", Toast.LENGTH_SHORT).show();
+        }
     }
 
     private boolean validate() {
@@ -57,7 +56,7 @@ public class CreateAccount extends AppCompatActivity {
         if (username.isEmpty() || username.length() < 4 || username.length() > 16) {
             usernameTxt.setError(getString(R.string.username_length));
             return false;
-        } else if (!username.matches("\\w")) {
+        } else if (username.matches("\\w")) {
             usernameTxt.setError(getString(R.string.valid_characters));
             return false;
 
@@ -69,7 +68,7 @@ public class CreateAccount extends AppCompatActivity {
             passwordTxt.setError(getString(R.string.password_length));
             return false;
 
-        } else if (!password.matches("\\w")) {
+        } else if (password.matches("\\w")) {
             passwordTxt.setError(getString(R.string.valid_characters));
             return false;
         }
