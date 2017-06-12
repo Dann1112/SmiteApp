@@ -9,7 +9,6 @@ import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
-import android.widget.Toast;
 
 public class Login extends AppCompatActivity {
 
@@ -55,36 +54,36 @@ public class Login extends AppCompatActivity {
 
 
     private void login(String username, String password) {
+
         if (validate()) {
 
-            Toast.makeText(this, "Autenticado", Toast.LENGTH_SHORT).show();
-            //Intent toMainMenu = new Intent().setClass(Login.this, MainMenu.class);
-            //startActivity(toMainMenu);
-        } else
-            Toast.makeText(this, "FAIL", Toast.LENGTH_SHORT).show();
+            //TODO Connection to DB to login user
+            Intent toMainMenu = new Intent().setClass(Login.this, MainMenu.class);
+            startActivity(toMainMenu);
+        }
     }
 
     private boolean validate() {
-
-
 
         if (username.isEmpty() || username.length() < 4 || username.length() > 16) {
             usernameTxt.setError(getString(R.string.username_length));
             usernameTxt.setText("");
             passwordTxt.setText("");
             return false;
-        } else if (!username.matches("\\w")) {
+
+        } else if (username.matches("\\w")) {
             usernameTxt.setError(getString(R.string.valid_characters));
             usernameTxt.setText("");
             passwordTxt.setText("");
             return false;
+
         } else if (pass.isEmpty() || pass.length() < 4 || pass.length() > 16) {
             passwordTxt.setError(getString(R.string.password_length));
             usernameTxt.setText("");
             passwordTxt.setText("");
             return false;
 
-        } else if (!pass.matches("\\w")) {
+        } else if (pass.matches("\\w")) {
             passwordTxt.setError(getString(R.string.valid_characters));
             usernameTxt.setText("");
             passwordTxt.setText("");
