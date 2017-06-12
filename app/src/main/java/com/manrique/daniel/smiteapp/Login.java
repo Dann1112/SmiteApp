@@ -32,6 +32,10 @@ public class Login extends AppCompatActivity {
         usernameTxt = (TextView) findViewById(R.id.username_txt);
         passwordTxt = (TextView) findViewById(R.id.password_txt);
 
+        signInBtn.setFocusable(true);
+        signInBtn.setFocusableInTouchMode(true);
+        signInBtn.requestFocus();
+
 
         signInBtn.setOnClickListener(new View.OnClickListener() {
             @Override
