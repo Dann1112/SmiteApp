@@ -62,7 +62,7 @@ public class Login extends AppCompatActivity {
         if (validate()) {
 
             //TODO Connection to DB to login user
-            Intent toMainMenu = new Intent().setClass(Login.this, MainMenu.class);
+            Intent toMainMenu = new Intent().setClass(Login.this, NavigationDrawer.class);
             startActivity(toMainMenu);
         }
     }

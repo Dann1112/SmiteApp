@@ -60,6 +60,9 @@
     <string name="email_length">Email is empty</string>
     <string name="go">Go</string>
     <string name="select_god">Select God</string>
+    <string name="news">What\'s New?</string>
+    <string name="ranking">Ranking</string>
+    <string name="leave_feedback">Leave Feedback</string>
 
     <string-array name="god_names_array">
         <item>Agni</item>

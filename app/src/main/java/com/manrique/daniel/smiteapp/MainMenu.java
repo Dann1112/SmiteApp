@@ -14,6 +14,7 @@ import android.text.Editable;
 import android.text.TextWatcher;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.EditText;
 import android.widget.GridView;
 
@@ -25,6 +26,7 @@ public class MainMenu extends AppCompatActivity
     GridView godsGrid;
     String[] names;
     HashMap<String, Integer> godsInfo;
+    View layoutToDisplay;
     private Integer[] avatars = {
             R.drawable.agni, R.drawable.ah_muzen_cab,
             R.drawable.ah_puch, R.drawable.amaterasu,
@@ -55,7 +57,7 @@ public class MainMenu extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-
+        layoutToDisplay = findViewById(R.id.layout_to_display);
         godsGrid = (GridView) findViewById(R.id.gods_grid);
 
 
@@ -158,17 +160,16 @@ public class MainMenu extends AppCompatActivity
             startActivity(goToProfile);
 
             // Handle the camera action
-        } else if (id == R.id.nav_create) {
+        } else if (id == R.id.nav_my_profile) {
             Intent goToCreation = new Intent().setClass(MainMenu.this, CreateNewBuild1.class);
+            getActionBar().setTitle(getResources().getString(R.string.my_profile));
 
-            startActivity(goToCreation);
-
-        } else if (id == R.id.nav_view) {
+        } else if (id == R.id.nav_create_build) {
             Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
 
             startActivity(goToProfile);
 
-        } else if (id == R.id.nav_favorites) {
+        } else if (id == R.id.nav_counters) {
             Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
 
             startActivity(goToProfile);

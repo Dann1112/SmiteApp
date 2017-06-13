@@ -26,6 +26,14 @@
                 <category android:name="android.intent.category.HOME" />
             </intent-filter>
 
+
+        </activity>
+        <activity android:name=".NavigationDrawer">
+
+            <intent-filter>
+                <category android:name="android.intent.category.HOME" />
+            </intent-filter>
+
         </activity>
 
         <activity
