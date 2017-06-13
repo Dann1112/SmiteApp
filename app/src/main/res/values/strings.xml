@@ -59,4 +59,32 @@
     <string name="email_format">Email must be formatted: \'example@example.com\'</string>
     <string name="email_length">Email is empty</string>
     <string name="go">Go</string>
+    <string name="select_god">Select God</string>
+
+    <string-array name="god_names_array">
+        <item>Agni</item>
+        <item>Ah Muzen Cab</item>
+        <item>Ah Puch</item>
+        <item>Amaterasu</item>
+        <item>Anhur</item>
+        <item>Anubis</item>
+        <item>Ao Kuang</item>
+        <item>Erlang Shen</item>
+        <item>The Morrigan</item>
+        <item>Thor</item>
+        <item>Rama</item>
+        <item>Aphrodite</item>
+        <item>Apollo</item>
+        <item>Arachne</item>
+        <item>Athena</item>
+        <item>Awilix</item>
+        <item>Bacchus</item>
+        <item>Bakasura</item>
+        <item>Bastet</item>
+        <item>Bellona</item>
+        <item>Cabrakan</item>
+        <item>Camazotz</item>
+        <item>Cernunnos</item>
+        <item>Chaac</item>
+    </string-array>
 </resources>
