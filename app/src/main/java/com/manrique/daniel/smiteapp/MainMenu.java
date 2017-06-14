@@ -57,7 +57,6 @@ public class MainMenu extends AppCompatActivity
         drawer.setDrawerListener(toggle);
         toggle.syncState();
 
-        layoutToDisplay = findViewById(R.id.layout_to_display);
         godsGrid = (GridView) findViewById(R.id.gods_grid);
 
 
