@@ -45,6 +45,7 @@ public class NavigationDrawer extends AppCompatActivity {
     private class DrawerItemClickListener implements ListView.OnItemClickListener {
 
         private static final int MY_PROFILE = 0;
+        private static final int CREATE_BUILD = 1;
 
         @Override
         public void onItemClick(AdapterView<?> parent, View view, int position, long id) {

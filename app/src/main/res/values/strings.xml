@@ -91,6 +91,27 @@
         <item>Chaac</item>
     </string-array>
 
+    <string-array name="game_modes">
+        <item>Any</item>
+        <item>Arena</item>
+        <item>Joust</item>
+        <item>Conquest</item>
+        <item>Assault</item>
+        <item>Siege</item>
+    </string-array>
+
+    <string-array name="conquest_lanes">
+        <item>Any</item>
+        <item>Carry</item>
+        <item>Jungle</item>
+        <item>Solo</item>
+        <item>Guardian</item>
+        <item>Mid</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="gods_avatar">God\'s avatar</string>
+    <string name="filter_by_game_mode">Filter by game mode</string>
+    <string name="any_mode">Any</string>
 </resources>

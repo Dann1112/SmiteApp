@@ -1,5 +1,8 @@
 package com.manrique.daniel.smiteapp;
 
+import android.app.Activity;
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -7,7 +10,6 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 import android.widget.ImageView;
 import android.widget.TextView;
-import android.widget.Toast;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -21,14 +23,11 @@ public class godsAdapter extends BaseAdapter {
 
     public godsAdapter(HashMap<String, Integer> godsInfo, Context c) {
         context = c;
-
         SortedSet<String> keys = new TreeSet<>(godsInfo.keySet());
-        int i = 0;
         for (String key : keys) {
             Integer avatarId = godsInfo.get(key);
             godsAvatars.add(avatarId);
             godsNames.add(key);
-            i++;
         }
     }
 
@@ -69,7 +68,15 @@ public class godsAdapter extends BaseAdapter {
             @Override
             public void onClick(View v) {
                 //Abrir builds de este dios
-                Toast.makeText(context, godsNames.get(position), Toast.LENGTH_SHORT).show();
+                Fragment fragment;
+
+                // Insert the fragment by replacing any existing fragment
+                FragmentManager fragmentManager = ((Activity) context).getFragmentManager();
+                fragment = new GodBuildsFragment();
+
+                fragmentManager.beginTransaction()
+                        .replace(R.id.content_frame, fragment)
+                        .commit();
             }
         });
 
