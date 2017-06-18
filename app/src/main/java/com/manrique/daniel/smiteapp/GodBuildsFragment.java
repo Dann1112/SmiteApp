@@ -9,6 +9,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
+import android.widget.ListView;
 import android.widget.Spinner;
 
 
@@ -25,6 +26,8 @@ public class GodBuildsFragment extends Fragment {
         super.onActivityCreated(savedInstanceState);
         Spinner gameModes = (Spinner) getActivity().findViewById(R.id.game_modes_spinner);
         final Spinner conquestLanes = (Spinner) getActivity().findViewById(R.id.conquest_lanes_spinner);
+        ListView buildsList = (ListView) getActivity().findViewById(R.id.god_builds_list);
+
 
         gameModes.setAdapter(new ArrayAdapter<>(getActivity(),
                 android.R.layout.simple_spinner_dropdown_item,
@@ -51,5 +54,9 @@ public class GodBuildsFragment extends Fragment {
         });
 
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
+
+        BuildPreviewAdapter buildAdapter = new BuildPreviewAdapter(getActivity(), "Rama");
+
+        buildsList.setAdapter(buildAdapter);
     }
 }

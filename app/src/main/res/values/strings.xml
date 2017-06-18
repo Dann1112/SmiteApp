@@ -114,4 +114,10 @@
     <string name="gods_avatar">God\'s avatar</string>
     <string name="filter_by_game_mode">Filter by game mode</string>
     <string name="any_mode">Any</string>
+    <string name="build_name">Build\'s name</string>
+    <string name="by_username">By: Username</string>
+    <string name="build_date">11/11/2011</string>
+    <string name="last_updated">Last Updated</string>
+    <string name="by">By:</string>
+    <string name="load_more">Load more</string>
 </resources>

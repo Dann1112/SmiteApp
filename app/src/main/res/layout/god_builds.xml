@@ -3,6 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/background"
+    android:fillViewport="true"
     android:padding="@dimen/outter_margin">
 
     <LinearLayout
@@ -77,9 +78,11 @@
 
         </LinearLayout>
 
-        <ListView
+        <com.manrique.daniel.smiteapp.ExpandableHeightListView
+            android:id="@+id/god_builds_list"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"></ListView>
+            android:layout_height="wrap_content"
+            android:layout_marginTop="24dp" />
 
     </LinearLayout>
 
