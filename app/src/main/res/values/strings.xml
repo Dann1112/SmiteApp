@@ -109,6 +109,42 @@
         <item>Mid</item>
     </string-array>
 
+    <string-array name="damage_type">
+        <item>Any</item>
+        <item>Magical</item>
+        <item>Physical</item>
+    </string-array>
+
+    <string-array name="type">
+        <item>Any</item>
+        <item>Power</item>
+        <item>Physical Def</item>
+        <item>Magical Def</item>
+        <item>Lifesteal</item>
+        <item>Attack Speed</item>
+    </string-array>
+
+    <string-array name="item_names">
+        <item>Acorn Of Swiftness</item>
+        <item>Acorn of Yggdrasil</item>
+        <item>Adventurers Blade</item>
+        <item>Aegis Amulet</item>
+        <item>Anient Blade</item>
+        <item>Ancile</item>
+        <item>Armored Cloak</item>
+        <item>Asi</item>
+        <item>Balanced Blade</item>
+        <item>Bancrofts Talon</item>
+        <item>Belt of Frenzy</item>
+        <item>Blackthorn Hammer</item>
+        <item>Blink Rune</item>
+        <item>Bloodforge</item>
+        <item>Bluestone Pendant</item>
+        <item>Book of the Dead</item>
+        <item>Book of Thoth</item>
+        <item>Boots</item>
+    </string-array>
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="gods_avatar">God\'s avatar</string>
@@ -120,4 +156,6 @@
     <string name="last_updated">Last Updated</string>
     <string name="by">By:</string>
     <string name="load_more">Load more</string>
+    <string name="item">Item</string>
 </resources>
+

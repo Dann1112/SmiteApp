@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    android:orientation="vertical"
+    android:padding="@dimen/outter_margin">
+
+    <EditText
+        android:id="@+id/build_name_lbl"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="@string/build_name"
+        android:textSize="@dimen/main_title" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:background="@color/colorPrimary"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="8dp">
+
+        <ImageView
+            android:id="@+id/item_1_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:contentDescription="@string/item"
+            android:src="@drawable/one" />
+
+        <ImageView
+            android:id="@+id/item_2_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/item"
+            android:src="@drawable/two" />
+
+        <ImageView
+            android:id="@+id/item_3_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/item"
+            android:src="@drawable/three" />
+
+        <ImageView
+            android:id="@+id/item_4_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/item"
+            android:src="@drawable/four" />
+
+        <ImageView
+            android:id="@+id/item_5_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/item"
+            android:src="@drawable/five" />
+
+        <ImageView
+            android:id="@+id/item_6_img"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginStart="5dp"
+            android:contentDescription="@string/item"
+            android:src="@drawable/six" />
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:gravity="center"
+        android:orientation="horizontal">
+
+
+        <Spinner
+            android:id="@+id/damage_type_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="8dp" />
+
+        <Spinner
+            android:id="@+id/type_spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </LinearLayout>
+
+    <GridView
+        android:id="@+id/items_grid"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:choiceMode="singleChoice"
+        android:horizontalSpacing="8dp"
+        android:numColumns="3"
+        android:verticalSpacing="8dp">
+
+    </GridView>
+
+</LinearLayout>

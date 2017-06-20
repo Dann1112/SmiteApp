@@ -1,5 +1,7 @@
 package com.manrique.daniel.smiteapp;
 
+import android.app.Fragment;
+import android.app.FragmentManager;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
@@ -164,9 +166,15 @@ public class MainMenu extends AppCompatActivity
             getActionBar().setTitle(getResources().getString(R.string.my_profile));
 
         } else if (id == R.id.nav_create_build) {
-            Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);
+            Fragment fragment;
 
-            startActivity(goToProfile);
+            // Insert the fragment by replacing any existing fragment
+            FragmentManager fragmentManager = getFragmentManager();
+            fragment = new BuildBuilderFragment();
+
+            fragmentManager.beginTransaction()
+                    .replace(R.id.content_frame, fragment)
+                    .commit();
 
         } else if (id == R.id.nav_counters) {
             Intent goToProfile = new Intent().setClass(MainMenu.this, UserProfile.class);

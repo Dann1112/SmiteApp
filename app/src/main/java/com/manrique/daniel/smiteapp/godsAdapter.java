@@ -72,7 +72,7 @@ public class godsAdapter extends BaseAdapter {
 
                 // Insert the fragment by replacing any existing fragment
                 FragmentManager fragmentManager = ((Activity) context).getFragmentManager();
-                fragment = new GodBuildsFragment();
+                fragment = new BuildBuilderFragment();
 
                 fragmentManager.beginTransaction()
                         .replace(R.id.content_frame, fragment)
