@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.app.AppCompatDelegate;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 public class Login extends AppCompatActivity {
@@ -15,9 +16,25 @@ public class Login extends AppCompatActivity {
     Button signInBtn;
     Button signUpBtn;
     TextView usernameTxt;
+    ImageView logoImg;
     TextView passwordTxt;
     String username;
     String pass;
+    private View.OnClickListener loginListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            username = String.valueOf(usernameTxt.getText());
+            pass = String.valueOf(passwordTxt.getText());
+            login(username, pass);
+        }
+    };
+    private View.OnClickListener createAccountListener = new View.OnClickListener() {
+        @Override
+        public void onClick(View v) {
+            Intent toCreateAccount = new Intent().setClass(Login.this, CreateAccount.class);
+            startActivity(toCreateAccount);
+        }
+    };
 
     @Override
     protected void onCreate(@Nullable Bundle savedInstanceState) {
@@ -27,35 +44,22 @@ public class Login extends AppCompatActivity {
         AppCompatDelegate.setDefaultNightMode(AppCompatDelegate.MODE_NIGHT_YES);
         setContentView(R.layout.login);
 
+        logoImg = (ImageView) findViewById(R.id.logo_img);
         signInBtn = (Button) findViewById(R.id.sign_in_btn);
         signUpBtn = (Button) findViewById(R.id.sign_up_btn);
         usernameTxt = (TextView) findViewById(R.id.username_txt);
         passwordTxt = (TextView) findViewById(R.id.password_txt);
 
-        signInBtn.setFocusable(true);
-        signInBtn.setFocusableInTouchMode(true);
-        signInBtn.requestFocus();
+        signInBtn.setOnClickListener(loginListener);
 
+        signUpBtn.setOnClickListener(createAccountListener);
 
-        signInBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                username = String.valueOf(usernameTxt.getText());
-                pass = String.valueOf(passwordTxt.getText());
+        logoImg.setFocusable(true);
+        logoImg.setFocusableInTouchMode(true);
+        logoImg.requestFocus();
 
-                login(username, pass);
-            }
-        });
-
-        signUpBtn.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                startActivity(new Intent().setClass(Login.this, CreateAccount.class));
-            }
-        });
 
     }
-
 
     private void login(String username, String password) {
 

@@ -11,6 +11,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.EditText;
 import android.widget.GridView;
+import android.widget.TextView;
 
 import java.util.HashMap;
 
@@ -43,6 +44,11 @@ public class MainGodSelection extends Fragment {
 
         godsGrid = (GridView) getView().findViewById(R.id.gods_grid);
         names = this.getResources().getStringArray(R.array.god_names_array);
+
+        TextView title = (TextView) getView().findViewById(R.id.select_god_lbl);
+        title.setFocusable(true);
+        title.setFocusableInTouchMode(true);
+        title.requestFocus();
 
         for (int i = 0; i < names.length; i++)
             godsInfo.put(names[i], avatars[i]);
